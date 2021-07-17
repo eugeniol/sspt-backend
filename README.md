@@ -7,6 +7,17 @@ Backend data source to read/write files for merchant self service
 Each merchant is provissioned with an empty git repo under `sspt-data/<merchantId>`. Express api performs basic operations such as create/read/list files and read git history
 
 
+### Run it locally 
+
+```sh
+  docker-compose up
+```
+
+Browse http://localhost:3031
+
+provsison some merchant first the create fies or upload a zip file containing all stuff.
+
+
 #### API routes
 
 ```js
@@ -33,6 +44,12 @@ This microservice uses JWT authorization (rc3 token)
 
 ```sh
 curl -H 'Authorization: Bearer <JWT>'  ...
+```
+
+### POST /:merchantId - Provision a merchant
+
+```sh 
+curl -H 'Authorization: Bearer <JWT>' -X POST http://localhost:3031/d4ce4ebe635211e8bf29bc764e1107f2/
 ```
 
 ### GET /:merchantId - Listing all files

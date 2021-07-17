@@ -69,7 +69,9 @@ async function gitInit(req, res, next) {
       const git = simpleGit({ baseDir, binary: 'git', maxConcurrentProcesses: 6 });
       await git.init();
       res.status(201);
-      res.end();
+      res.send();
+    } else {
+      next({ statusCode: 400 });
     }
   } catch (err) {
     next(err);
