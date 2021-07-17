@@ -1,0 +1,43 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/results
+/cypress/screenshots
+/cypress/videos
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# sha1 of package-lock.json
+.package-lock_sha1*
+
+.npmrc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode
+.idea
+
+*.yaml.dec
+
+.nvmrc
+
+gcs_creds.json
+
+# storybook
+/storybook-static
+sspt-data

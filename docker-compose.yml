@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sspt:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - ./sspt-data:/app/sspt-data
+    ports:
+      - '3031:3031'
+    labels:
+      - 'traefik.frontend.rule=Host:sspt.ordergroove.localhost'
+      - 'traefik.port=3031'
+    
